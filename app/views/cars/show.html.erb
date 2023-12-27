@@ -1,3 +1,13 @@
 <h1><%= @car.modelo%></h1>
 <h2><%= @car.marca%></h2>
-CAR ID <%= @car_id %> 
+<h3>CAR ID <%= @car.id %></h3>
+<h3>Transmision <%= @car.transmision %></h3>
+<% @car.images.each do |car_image| %>
+  <%= image_tag(car_image, size: '200') %>
+<% end %>
+
+<%= link_to 'Edit', edit_car_path(@car) %>
+<%= link_to 'Delete', car_path(@car), data:{
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %>

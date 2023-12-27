@@ -1,9 +1,6 @@
 <h1>Hola cars</h1>
 
 <p>Avaliable vehicles <%= @cars.count %> </p>
-
-        <div><%= notice %></div>
-
     <% @cars.each do |car| %>
     <div class='car'>    
         <h1><%= car.marca %> <%= car.modelo %></h1>
