@@ -1,0 +1,16 @@
+<h1>Hola cars</h1>
+
+<p>Avaliable vehicles <%= @cars.count %> </p>
+
+
+    <% @cars.each do |car| %>
+    <div class='car'>    
+        <h1><%= car.marca %> <%= car.modelo %></h1>
+        <p>Precio por dia $<%= car.preciodiario %></p>
+        <%= link_to car_path(car.id) do %>
+            <button>Ver mas</button>
+        <% end %>
+    </div>
+    <% end %>
+
+
