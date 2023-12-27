@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_26_225637) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_27_011128) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
-    t.string "modelo"
-    t.string "marca"
-    t.string "transmision"
-    t.integer "anio"
-    t.integer "capacidad"
-    t.float "preciodiario"
+    t.string "modelo", null: false
+    t.string "marca", null: false
+    t.string "transmision", null: false
+    t.integer "anio", null: false
+    t.integer "capacidad", null: false
+    t.float "preciodiario", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

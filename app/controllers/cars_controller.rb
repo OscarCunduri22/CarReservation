@@ -16,9 +16,9 @@ class CarsController < ApplicationController
     def create 
         @car = Car.new(car_params)
         if @car.save
-            redirect_to cars_path
+            redirect_to cars_path, notice: "El registro fue creado con éxito"
         else
-            render :new_car
+            render :new, status: :unprocessable_entity
         end
         pp @car
     end
