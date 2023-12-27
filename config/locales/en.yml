@@ -1,31 +1,45 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      car: "Car"
+    attributes:
+      car:
+        modelo: "Model"
+        marca: "Brand"
+        capacidad: "Capacity"
+        transmision: "Transmission"
+        preciodiario: "Price per day"
+        anio: "Year"
+        images: "Images"
+    errors:
+      models:
+        car:
+          attributes:
+            modelo:
+              blank: "Model can't be blank"
+            marca:
+              blank: "Brand can't be blank"
+            capacidad:
+              blank: "Capacity can't be blank"
+            transmision:
+              blank: "Transmission can't be blank"
+            preciodiario:
+              blank: "Price per day can't be blank"
+            anio:
+              blank: "Year can't be blank"
+  common:
+    confirm: "Are you sure?"
+  cars:
+    edit:
+      title: "Edit car"
+    new:
+      title: "New car"
+    index:
+      title: "Cars"
+    create:
+      created: "Car created successfully"
+    update:
+      updated: "Car updated successfully"
+    destroy:
+      destroyed: "Car destroyed successfully"
+      error: "Car could not be destroyed"

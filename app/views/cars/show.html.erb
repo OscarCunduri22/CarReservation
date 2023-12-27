@@ -9,5 +9,5 @@
 <%= link_to 'Edit', edit_car_path(@car) %>
 <%= link_to 'Delete', car_path(@car), data:{
   turbo_method: :delete,
-  turbo_confirm: "Are you sure?"
+  turbo_confirm: t('common.confirm')
 } %>

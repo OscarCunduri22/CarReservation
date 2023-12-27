@@ -1,6 +1,6 @@
 class CarsController < ApplicationController
   def index
-    @cars = Car.all.width_attached_images
+    @cars = Car.all.with_attached_images
   end
 
   def show
@@ -16,7 +16,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      redirect_to cars_path, notice: "El registro fue creado con éxito"
+      redirect_to cars_path, notice: t('.created')
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class CarsController < ApplicationController
 
   def update
     if car.update(car_params)
-      redirect_to cars_path, notice: "El registro fue actualizado con éxito"
+      redirect_to cars_path, notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,9 +36,9 @@ class CarsController < ApplicationController
 
   def destroy
     if car.destroy
-      redirect_to cars_path, notice: "El registro fue eliminado con éxito", status: :see_other
+      redirect_to cars_path, notice: t('.destroyed'), status: :see_other
     else
-      redirect_to cars_path, notice: "El registro no pudo ser eliminado", status: :unprocessable_entity
+      redirect_to cars_path, notice: t('.error'), status: :unprocessable_entity
     end
   end
 

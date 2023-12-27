@@ -1,0 +1,45 @@
+es:
+  activerecord:
+    models:
+      car: "Car"
+    attributes:
+      car:
+        modelo: "Modelo"
+        marca: "Marca"
+        capacidad: "Capacidad"
+        transmision: "Tipo de transmisión"
+        preciodiario: "Precio por día"
+        anio: "Año"
+        images: "Imágenes"
+    errors:
+      models:
+        car:
+          attributes:
+            modelo:
+              blank: "El modelo no puede estar vacío"
+            marca:
+              blank: "La marca no puede estar vacía"
+            capacidad:
+              blank: "La capacidad no puede estar vacía"
+            transmision:
+              blank: "La transmisión no puede estar vacía"
+            preciodiario:
+              blank: "El precio por día no puede estar vacío"
+            anio:
+              blank: "El año no puede estar vacío"
+  common:
+    confirm: "¿Estás seguro?"
+  cars:
+    edit:
+      title: "Editar coche"
+    new:
+      title: "Nuevo coche"
+    index:
+      title: "Coches"
+    create:
+      created: "Coche creado correctamente"
+    update:
+      updated: "Coche actualizado correctamente"
+    destroy:
+      destroyed: "Coche eliminado correctamente"
+      error: "No se ha podido eliminar el coche"
