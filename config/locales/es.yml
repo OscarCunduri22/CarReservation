@@ -11,6 +11,9 @@ es:
         preciodiario: "Precio por día"
         anio: "Año"
         images: "Imágenes"
+        type: "Tipo de auto"
+      type:
+        nombre: "Tipo de auto"
     errors:
       models:
         car:
@@ -27,6 +30,12 @@ es:
               blank: "El precio por día no puede estar vacío"
             anio:
               blank: "El año no puede estar vacío"
+            type:
+              blank: "El tipo no puede estar vacío"
+        type:
+          attributes:
+            name:
+              blank: "El nombre no puede estar vacío"
   common:
     confirm: "¿Estás seguro?"
   cars:
@@ -36,6 +45,10 @@ es:
       title: "Nuevo coche"
     index:
       title: "Coches"
+      all: "Todos"
+      min_value: "Valor minimo"
+      max_value: "Valor maximo"
+      submit: "Filtrar"
     create:
       created: "Coche creado correctamente"
     update:
@@ -43,3 +56,23 @@ es:
     destroy:
       destroyed: "Coche eliminado correctamente"
       error: "No se ha podido eliminar el coche"
+    filter_html:
+      max_value: "Valor maximo"
+      min_value: "Valor minimo"
+    filter:
+      max_value: "Precio maximo"
+      min_value: "Valor minimo"
+    order_by:
+      order: "Ordenar por"
+      descendente: "Menor"
+      ascendente: "Mayor"
+  type:
+    edit:
+      title: "Editar tipo"
+    new:
+      title: "Nuevo tipo"
+    index:
+      title: "Tipos"
+    delete:
+      title: "Eliminar tipo"
+      confirm: "¿Estás seguro de que quieres eliminar este tipo?"

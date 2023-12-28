@@ -1,7 +1,7 @@
 <div class='car'>
   <h1><%= car.marca %> <%= car.modelo %></h1>
   <p>Precio por dia $<%= car.preciodiario %></p>
-  <%= link_to car_path(car.id) do %>
+  <%= link_to car_path(car.id), 'data-turbo-frame': '_top'  do %>
     <button>Ver mas</button>
   <% end %>
 </div>

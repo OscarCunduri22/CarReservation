@@ -1,0 +1,13 @@
+<h3><%= t('.order') %></h3>
+<%= form_with url: cars_path, method: :get do |form| %>
+  <h3>Precio</h3>
+  <div>
+    <%= form.label :filter_price_min, t('.descendente') %>
+    <%= form.radio_button :filter_price_min, 'true', onchange: 'this.form.submit()' %>
+  </div>
+  <div>
+    <%= form.label :filter_price_max, t('.ascendente') %>
+    <%= form.radio_button :filter_price_max, 'true', onchange: 'this.form.submit()' %>
+  </div>
+
+<% end %>

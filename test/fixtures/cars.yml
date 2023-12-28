@@ -7,6 +7,7 @@ carone:
   anio: 2018
   capacidad: 4
   preciodiario: 1.5
+  type: one
 
 cartwo:
   modelo: SZ
@@ -15,3 +16,4 @@ cartwo:
   anio: 2018
   capacidad: 5
   preciodiario: 1.5
+  type: two

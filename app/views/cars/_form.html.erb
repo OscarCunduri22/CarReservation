@@ -12,6 +12,12 @@
     <%= form.label :modelo %>
     <%= form.text_field :modelo %>
   </div>
+
+  <div>
+    <%= form.label :type %>
+    <%= form.collection_select :type_id, Type.all.order(name: :asc), :id, :name %>
+  </div>
+
   <div>
     <%= form.label :transmision %>
     <%= form.select :transmision, ['Automática', 'Manual'] %>

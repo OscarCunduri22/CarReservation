@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   def index
-    @cars = Car.all.with_attached_images
+    @types = Type.order(name: :asc)
+    @cars = FindCars.new.call(params)
   end
 
   def show
@@ -45,10 +46,13 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:marca, :modelo, :transmision, :anio, :capacidad, :preciodiario, images: [])
+    params.require(:car).permit(:marca, :modelo, :transmision, :anio, :capacidad, :preciodiario, :type_id, images: [])
   end
 
   def car
     @car = Car.find(params[:id])
   end
+
 end
+
+

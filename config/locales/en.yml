@@ -11,6 +11,9 @@ en:
         preciodiario: "Price per day"
         anio: "Year"
         images: "Images"
+        type: "Car type"
+      type:
+        name: "Tipo de auto"
     errors:
       models:
         car:
@@ -27,6 +30,12 @@ en:
               blank: "Price per day can't be blank"
             anio:
               blank: "Year can't be blank"
+            type:
+              blank: "Car type can't be blank"
+        type:
+          attributes:
+            name:
+            blank: "Name can't be blank"
   common:
     confirm: "Are you sure?"
   cars:
@@ -36,6 +45,10 @@ en:
       title: "New car"
     index:
       title: "Cars"
+      all: "All"
+      min_value: "Minimum value"
+      max_value: "Maximum value"
+      submit: "Filter"
     create:
       created: "Car created successfully"
     update:
@@ -43,3 +56,23 @@ en:
     destroy:
       destroyed: "Car destroyed successfully"
       error: "Car could not be destroyed"
+    filter_html:
+      max_value: "Maximum value"
+      min_value: "Minimum value"
+    filter:
+      max_value: "Maximum price"
+      min_value: "Minimum value"
+    order_by:
+      order: "Order by"
+      descendente: "Minor"
+      ascendente: "Major"
+  type:
+    edit:
+      title: "Edit type"
+    new:
+      title: "New type"
+    index:
+      title: "Types"
+    delete:
+      title: "Delete type"
+      confirm: "Are you sure you want to delete this type?"

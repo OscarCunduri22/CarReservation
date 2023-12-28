@@ -1,7 +1,18 @@
-<h1><%= t('.title') %></h1>
+<%= turbo_frame_tag 'types' do %>
 
-<p>Avaliable vehicles <%= @cars.count %> </p>
+  <h1><%= t('.title') %></h1>
 
-<%= render partial: 'car', collection: @cars %>
+  <p>Avaliable vehicles <%= @cars.count %> </p>
+  <p>Categories count: <%= @types.count %></p>
+
+
+
+  <%= link_to t('.all'), cars_path %>
+  <%= render partial: 'type', collection: @types %>
+  <%= render 'cars/filter' %>
+  <%= render 'cars/order_by' %>
+  <%= render partial: 'car', collection: @cars %>
+
+<% end %>
 
 

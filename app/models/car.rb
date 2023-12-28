@@ -6,5 +6,7 @@ class Car < ApplicationRecord
     validates :transmision, presence: true
     validates :anio, presence: true
     validates :capacidad, presence: true
-    validates :preciodiario, presence: true   
+    validates :preciodiario, presence: true
+
+    belongs_to :type
 end

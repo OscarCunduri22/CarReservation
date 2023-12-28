@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :types, except: :show
+  resources :cars, path: '/'
 =begin
   get '/cars/new' => 'cars#new', as: :new_car
   get "cars" => "cars#index", as: :cars
@@ -10,6 +12,6 @@ Rails.application.routes.draw do
 =end
 
   #Se reemplaza todas las rutas anteriores con el comando siguiente
-  resources :cars, path: '/'
+
 
 end
