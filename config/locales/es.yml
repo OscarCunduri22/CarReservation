@@ -1,4 +1,10 @@
 es:
+  authentication:
+    sessions:
+      create:
+        success: "Bienvenido"
+      destroy:
+        destroyed: "Sesión cerrada correctamente"
   activerecord:
     models:
       car: "Car"
@@ -15,6 +21,8 @@ es:
       type:
         nombre: "Tipo de auto"
     errors:
+      messages:
+        invalid: "Nombre de usuario o contraseña inválidos"
       models:
         car:
           attributes:
@@ -34,6 +42,24 @@ es:
               blank: "El tipo no puede estar vacío"
         type:
           attributes:
+            name:
+              blank: "El nombre no puede estar vacío"
+        user:
+          invalid: "Nombre de usuario o contraseña inválidos"
+          too_long: "El nombre de usuario es demasiado largo (máximo 15 caracteres)"
+          attributes:
+            email:
+              blank: "El email no puede estar vacío"
+              taken: "El email ya está en uso"
+            password:
+              blank: "La contraseña no puede estar vacía"
+              too_short: "La contraseña es demasiado corta (mínimo 6 caracteres)"
+            username:
+              blank: "El nombre de usuario no puede estar vacío"
+              taken: "El nombre de usuario ya está en uso"
+              too_short: "El nombre de usuario es demasiado corto (mínimo 6 caracteres)"
+              too_long: "El nombre de usuario es demasiado largo (máximo 15 caracteres)"
+              invalid: "El nombre de usuario es inválido"
             name:
               blank: "El nombre no puede estar vacío"
   common:
@@ -76,3 +102,7 @@ es:
     delete:
       title: "Eliminar tipo"
       confirm: "¿Estás seguro de que quieres eliminar este tipo?"
+  authentication:
+    users:
+      create:
+        created: "Usuario creado correctamente"
