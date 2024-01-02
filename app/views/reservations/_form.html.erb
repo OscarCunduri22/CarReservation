@@ -1,0 +1,29 @@
+<%= form_with model: @reservation do |form| %>
+
+    <% @reservation.errors.full_messages.each do |error| %>
+        <div><%= error %></div>
+    <% end %>
+    
+    <div>
+        <%= form.label :pickup_date %>
+        <%= form.date_field :pickup_date %>
+    </div>
+    <div>
+        <%= form.label :return_date %>
+        <%= form.date_field :return_date %>
+    </div>
+
+
+    <div>
+    <%= form.label :status %>
+    <%= form.select :status, ['Pendiente', 'Finalizado'], value: :status, disabled: ['Pendiente', 'Finalizado'] %>
+  </div>
+
+    <%= form.hidden_field :user_id, value: Current.user.id %>
+    <%= form.hidden_field :car_id, value: @car.id %>
+    <%= form.hidden_field :total_price, value: 52.00 %>
+    
+    <%= form.submit "Guardar" %>
+
+<% end %>
+

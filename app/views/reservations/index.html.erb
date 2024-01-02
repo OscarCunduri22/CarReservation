@@ -1,0 +1,11 @@
+<h1>Admin, list of reservations</h1>
+
+
+<h1>My reservations</h1>
+
+<% @reservations.each do |reservation| %>
+    <p>Auto reservado <%= reservation.car_id %></p>
+    <%= link_to reservation_path(reservation.id) do %>
+        <button>Ver mas</button>
+    <% end %>
+<% end %>

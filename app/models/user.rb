@@ -11,6 +11,8 @@ class User < ApplicationRecord
             message: :invalid
         }
 
+    has_many :reservations, dependent: :destroy
+
     before_save :downcase_attributes
 
     private

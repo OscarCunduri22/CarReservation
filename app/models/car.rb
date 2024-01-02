@@ -9,4 +9,6 @@ class Car < ApplicationRecord
     validates :preciodiario, presence: true
 
     belongs_to :type
+    has_many :reservations, dependent: :destroy
+
 end

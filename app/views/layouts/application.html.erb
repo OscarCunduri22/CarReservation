@@ -11,9 +11,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class='bg-green-400 prose'>
+  <body class='bg-green-400 w-full h-full'>
     <%= render 'shared/header' %>
     <%= render 'shared/flash' %>
-    <%= yield %>
+    <div class='w-full h-full'>
+      <%= yield %>
+    <div>
   </body>
 </html>
