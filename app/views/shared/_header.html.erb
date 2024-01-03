@@ -1,8 +1,18 @@
-<div class="w-full flex justify-center align-center bg-red-400">
-<%= link_to cars_path do %>
-<h1>Car reservation</h1>
-<% end %>
-
-<%= link_to 'Nuevo auto', new_car_path %>
-
-</div>
+<header class="py-2 px-10 flex items-center fixed top-0 w-full justify-between bg-zinc-800 text-white">
+        <nav>
+            <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4  [&>li>a]:py-2">
+                <%= link_to root_path do %>
+                <img class="h-10 bg-white" src="https://png.pngtree.com/png-clipart/20210718/original/pngtree-red-car-icon-png-image_6545398.jpg" alt="logo" />
+                <% end %>
+                <li><%= link_to 'Autos' ,cars_path %></li>
+                <li><a href="#">Renta</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4  [&>li>a]:py-2">
+                <li><%= link_to 'Iniciar Sesión' ,new_session_path %></li>
+                <li><%= link_to 'Registrarse' ,new_user_path %></li>
+            </ul>
+        </nav>
+    </header>
