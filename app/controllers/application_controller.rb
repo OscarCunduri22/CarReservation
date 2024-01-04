@@ -1,5 +1,12 @@
 class ApplicationController < ActionController::Base
 
+  class NotAuthorizedError < StandardError
+  end
+  
+  rescue_from NotAuthorizedError do
+    redirect_to root_path, alert: 'Permiso denegado'
+  end
+
   around_action :switch_locale
   before_action :set_current_user
   before_action :protect_pages
@@ -20,6 +27,11 @@ class ApplicationController < ActionController::Base
 
   def protect_pages
     redirect_to new_session_path, alert: 'Debes iniciar sesion antes' unless Current.user
+  end
+
+  def authorize!
+    is_allowed = Current.user.admin?
+    raise NotAuthorizedError unless is_allowed
   end
 
 end

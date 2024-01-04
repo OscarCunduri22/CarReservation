@@ -1,5 +1,6 @@
 class TypesController < ApplicationController
   before_action :set_type, only: %i[ edit update destroy ]
+  before_action :authorize!
 
   # GET /types or /types.json
   def index

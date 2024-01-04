@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   skip_before_action :protect_pages, only: [:index, :show]
-
+  before_action :authorize!, only: [:new, :create, :edit, :update, :destroy]
+  
   def index
     @types = Type.order(name: :asc)
     @cars = FindCars.new.call(car_params_index)
