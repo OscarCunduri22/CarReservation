@@ -1,6 +1,11 @@
 class Authentication::UsersController < ApplicationController
 
-    skip_before_action :protect_pages
+    skip_before_action :protect_pages, except: [:index]
+    before_action :authorize!, only: [:index]
+
+    def index
+        @users = User.all
+    end
 
     def new
         @user = User.new

@@ -24,9 +24,7 @@
 
         <div class="flex items-center justify-between">
           <%= form.submit "Iniciar sesión", class: "bg-black hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" %>
-          <a class="inline-block align-baseline font-bold text-sm text-black hover:text-gray-900" href="#">
-            ¿Olvidaste tu contraseña?
-          </a>
+          <%= link_to '¿Olvidaste tu contraseña?', password_reset_path, class: 'inline-block align-baseline font-bold text-sm text-black hover:text-gray-900' %>
         </div>
       </form>
     <% end %>
