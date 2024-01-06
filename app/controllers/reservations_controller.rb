@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
-    before_action :authorize!, only: [:edit, :update, :destroy]
+    #before_action :authorize!, except: [:index, :show]
+    before_action :protect_pages
     
     def index
         @reservations = Reservation.all

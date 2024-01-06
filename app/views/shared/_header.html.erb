@@ -7,6 +7,7 @@
                 <li><%= link_to 'Autos' ,cars_path %></li>
                 <li><a href="#">Renta</a></li>
                 <li><a href="#">Contactos</a></li>
+                <li><%= link_to 'Reservas' ,reservations_path if Current.user %></li>
                 <li><%= link_to 'Agregar Auto' ,new_car_path if Current.user&.admin %></li>
             </ul>
         </nav>

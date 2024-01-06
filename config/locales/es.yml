@@ -20,48 +20,52 @@ es:
         type: "Tipo de auto"
       type:
         nombre: "Tipo de auto"
+      user:
+        email: "Correo electrónico"
+        password_digest: "Contraseña"
+        name: "Nombre"
+        username: "Nombre de usuario"
     errors:
       messages:
         invalid: "Nombre de usuario o contraseña inválidos"
+        blank: "no puede estar vacío"
+        too_short: "es demasiado corto (mínimo %{count} caracteres)"
       models:
         car:
           attributes:
             modelo:
-              blank: "El modelo no puede estar vacío"
+              blank: "no puede estar vacío"
             marca:
-              blank: "La marca no puede estar vacía"
+              blank: "no puede estar vacía"
             capacidad:
-              blank: "La capacidad no puede estar vacía"
+              blank: "no puede estar vacía"
             transmision:
-              blank: "La transmisión no puede estar vacía"
+              blank: "no puede estar vacía"
             preciodiario:
-              blank: "El precio por día no puede estar vacío"
+              blank: "no puede estar vacío"
             anio:
-              blank: "El año no puede estar vacío"
+              blank: "no puede estar vacío"
             type:
-              blank: "El tipo no puede estar vacío"
+              blank: "no puede estar vacío"
         type:
           attributes:
             name:
-              blank: "El nombre no puede estar vacío"
+              blank: "no puede estar vacío"
         user:
-          invalid: "Nombre de usuario o contraseña inválidos"
-          too_long: "El nombre de usuario es demasiado largo (máximo 15 caracteres)"
           attributes:
             email:
-              blank: "El email no puede estar vacío"
-              taken: "El email ya está en uso"
-            password:
-              blank: "La contraseña no puede estar vacía"
-              too_short: "La contraseña es demasiado corta (mínimo 6 caracteres)"
+              blank: "El %{attribute} %{value}"
+              taken: "ya está en uso"
+            password_digest:
+              blank: "La %{attribute} %{message}"
             username:
-              blank: "El nombre de usuario no puede estar vacío"
-              taken: "El nombre de usuario ya está en uso"
-              too_short: "El nombre de usuario es demasiado corto (mínimo 6 caracteres)"
-              too_long: "El nombre de usuario es demasiado largo (máximo 15 caracteres)"
-              invalid: "El nombre de usuario es inválido"
+              blank: "El %{attribute} %{message}"
+              taken: "ya está en uso"
+              too_short: "es demasiado corto (mínimo %{count} caracteres)"
+              too_long: "es demasiado largo (máximo %{count} caracteres)"
+              invalid: "es inválido"
             name:
-              blank: "El nombre no puede estar vacío"
+              blank: "El %{attribute} %{message}"
   common:
     confirm: "¿Estás seguro?"
   cars:
@@ -72,8 +76,8 @@ es:
     index:
       title: "Coches"
       all: "Todos"
-      min_value: "Valor minimo"
-      max_value: "Valor maximo"
+      min_value: "Valor mínimo"
+      max_value: "Valor máximo"
       submit: "Filtrar"
     create:
       created: "Coche creado correctamente"
@@ -83,11 +87,11 @@ es:
       destroyed: "Coche eliminado correctamente"
       error: "No se ha podido eliminar el coche"
     filter_html:
-      max_value: "Valor maximo"
-      min_value: "Valor minimo"
+      max_value: "Valor máximo"
+      min_value: "Valor mínimo"
     filter:
-      max_value: "Precio maximo"
-      min_value: "Valor minimo"
+      max_value: "Precio máximo"
+      min_value: "Valor mínimo"
     order_by:
       order: "Ordenar por"
       descendente: "Menor"

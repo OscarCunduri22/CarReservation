@@ -12,11 +12,11 @@
   </section>
 
   <main class="flex w-full p-5">
-    <aside class="flex flex-col w-1/3">
+    <aside class="flex flex-col w-1/4 space-y-4">
       <%= render 'cars/filter' %>
       <%= render 'cars/order_by' %>
     </aside>
-    <section class="flex flex-col w-2/3">
+    <section class="flex flex-col w-3/4">
       <h2 class="font-semibold p-2">Vehiculos</h2>
       <p class='text-blue-500 p-2'>Avaliable vehicles <%= @cars.count %> </p>
       <div class="flex flex-wrap justify-between">

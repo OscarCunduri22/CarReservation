@@ -6,11 +6,11 @@
   <%= image_tag(car_image, size: '200') %>
 <% end %>
 
-<%= link_to 'Edit', edit_car_path(@car) %>
+<%= link_to 'Edit', edit_car_path(@car) if Current.user&.admin %>
 <%= link_to 'Delete', car_path(@car), data:{
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
-} %>
+} if Current.user&.admin %>
 <%= link_to 'Reservar', new_reservation_path(car_id: @car.id) %>
 
 
