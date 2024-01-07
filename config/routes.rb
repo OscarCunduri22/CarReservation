@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :authentication, path: '', as: '' do
     resources :users, only: [:new, :create], path: 'register', path_names: { new: '/'}
     resources :sessions, only: [:new, :create, :destroy], path: 'login', path_names: { new: '/' }
-    resources :admin, only: [:index], path: 'admin'
+    resources :admin, only: [:index], path: 'admin', as: 'admin'
   end
   
   resources :types, except: :show

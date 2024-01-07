@@ -15,6 +15,7 @@
             <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4  [&>li>a]:py-2">
                 <li><%= link_to 'Iniciar Sesión' ,new_session_path unless Current.user %></li>
                 <li><%= link_to 'Registrarse' ,new_user_path unless Current.user %></li>
+                <li><%= link_to 'Usuarios', admin_index_path if Current.user&.admin%></li>
                 <li><%= link_to 'Cerrar sesión', session_path(Current.user.id), data: {turbo_method: :delete}, class: "btn btn-danger" if Current.user %></li>
             </ul>
         </nav>

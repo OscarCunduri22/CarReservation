@@ -28,23 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="py-2 px-4 border-b">1</td>
-          <td class="py-2 px-4 border-b">123</td>
-          <td class="py-2 px-4 border-b">Juan Perez</td>
-          <td class="py-2 px-4 border-b">2024-01-01</td>
-          <td class="py-2 px-4 border-b">2024-01-07</td>
-          <td class="py-2 px-4 border-b">$200</td>
-          <% if Current.user&.admin %>
-          <td class="py-2 px-4 border-b">
-            <button class="bg-zinc-800 text-white py-1 px-2 rounded-full font-bold hover:bg-blue-800"
-              onclick="mostrarVentanaEditar()">Editar</button>
-            <button
-              class="border border-zinc-800 text-black py-1 px-2 rounded-full font-bold hover:text-white hover:bg-red-600  hover:border-red-600"
-              onclick="mostrarVentanaConfirmacion()">Eliminar</button>
-          </td>
-          <% end %>
-        </tr>
+        <%= render partial: 'reservation_row', collection: @reservations %>
       </tbody>
     </table>
   </div>

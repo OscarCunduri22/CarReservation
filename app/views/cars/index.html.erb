@@ -12,17 +12,19 @@
   </section>
 
   <main class="flex w-full p-5">
-    <aside class="flex flex-col w-1/4 space-y-4">
-      <%= render 'cars/filter' %>
-      <%= render 'cars/order_by' %>
-    </aside>
-    <section class="flex flex-col w-3/4">
-      <h2 class="font-semibold p-2">Vehiculos</h2>
-      <p class='text-blue-500 p-2'>Avaliable vehicles <%= @cars.count %> </p>
-      <div class="flex flex-wrap justify-between">
-        <%= render partial: 'car', collection: @cars %>
-      </div>
-  </main>
+  <aside class="flex flex-col w-1/4 space-y-4">
+    <%= render 'cars/filter' %>
+    <%= render 'cars/order_by' %>
+  </aside>
+  <section class="flex flex-col w-3/4">
+    <h2 class="font-semibold p-2">Vehículos</h2>
+    <p class='text-blue-500 p-2'>Vehículos disponibles: <%= @cars.count %></p>
+    <div class="grid grid-cols-3 gap-4">
+      <%= render partial: 'car', collection: @cars %>
+    </div>
+  </section>
+</main>
+
 
 <% end %>
 

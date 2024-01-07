@@ -29,7 +29,7 @@ es:
       messages:
         invalid: "Nombre de usuario o contraseña inválidos"
         blank: "no puede estar vacío"
-        too_short: "es demasiado corto (mínimo %{count} caracteres)"
+        too_short: "es demasiado corto"
       models:
         car:
           attributes:
@@ -47,6 +47,7 @@ es:
               blank: "no puede estar vacío"
             type:
               blank: "no puede estar vacío"
+              required: "es requerido"
         type:
           attributes:
             name:
@@ -54,18 +55,18 @@ es:
         user:
           attributes:
             email:
-              blank: "El %{attribute} %{value}"
+              blank: "es requerido"
               taken: "ya está en uso"
             password_digest:
-              blank: "La %{attribute} %{message}"
+              blank: "es requerido"
             username:
-              blank: "El %{attribute} %{message}"
+              blank: "es requerido"
               taken: "ya está en uso"
-              too_short: "es demasiado corto (mínimo %{count} caracteres)"
-              too_long: "es demasiado largo (máximo %{count} caracteres)"
+              too_short: "es demasiado corto minimo 6 caracteres"
+              too_long: "es demasiado largo maximo 15 caracteres"
               invalid: "es inválido"
             name:
-              blank: "El %{attribute} %{message}"
+              blank: "es requerido"
   common:
     confirm: "¿Estás seguro?"
   cars:
