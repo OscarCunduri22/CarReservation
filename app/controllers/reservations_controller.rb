@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
     
     def index
         @reservations = Reservation.all
+        @user_reservations = Reservation.where(user_id: Current.user.id)
     end
 
     def new
@@ -31,6 +32,14 @@ class ReservationsController < ApplicationController
         end
 
     end
+
+    def destroy
+        @reservation = Reservation.find(params[:id])
+        @reservation.destroy
+      
+        redirect_to reservations_path, notice: "Reservation deleted successfully"
+      end
+      
 
     private
 
