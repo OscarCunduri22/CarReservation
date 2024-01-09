@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
   root 'home#index'
+  
+  get '/contact', to: 'contact#index', as: :contact
 
   namespace :authentication, path: '', as: '' do
-    resources :users, only: [:new, :create], path: 'register', path_names: { new: '/'}
+    resources :users, only: [:new, :create, :show], path: 'register', path_names: { new: '/'}
     resources :sessions, only: [:new, :create, :destroy], path: 'login', path_names: { new: '/' }
     resources :admin, only: [:index], path: 'admin', as: 'admin'
   end
@@ -10,6 +13,10 @@ Rails.application.routes.draw do
   resources :types, except: :show
   resources :cars
   resources :reservations
+  
+  resources :rooms do
+    resources :messages
+  end
 
   get 'password/reset', to: 'password_resets#new'
   post 'password/reset', to: 'password_resets#create'
